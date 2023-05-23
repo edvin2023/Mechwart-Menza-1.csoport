@@ -75,7 +75,7 @@
                 </div>
               </div>
               <div class="card" style="width: 18rem; margin-left: 20px; margin-top: 50px;">
-                <img class="card-img-top" src="img/meggyleves.jpg" alt="Card image cap">
+                <img class="card-img-top" src="img/meggyleves.jpg" id="imgClickAndChange2" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Szerdai menü</h5>
                   <p class="card-text">Az adagok egy személyre vannak, a recept megtalálható a recept szóra kattintva.</p>
@@ -93,7 +93,7 @@
                 </div>
               </div>
               <div class="card" style="width: 18rem; margin-left: 20px; margin-top: 50px;">
-                <img class="card-img-top" src="img/tyukhusleves.jpg" alt="Card image cap">
+                <img class="card-img-top" src="img/tyukhusleves.jpg" id="imgClickAndChange3" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Csütörtöki menü</h5>
                   <p class="card-text">Az adagok egy személyre vannak, a recept megtalálható a recept szóra kattintva.</p>
@@ -111,7 +111,7 @@
                 </div>
               </div>
               <div class="card" style="width: 18rem; margin-left: 20px; margin-top: 50px;">
-                <img class="card-img-top" src="img/lebbencsleves.jpg" alt="Card image cap" title="lebbencsleves">
+                <img class="card-img-top" src="img/lebbencsleves.jpg" id="imgClickAndChange4" alt="Card image cap" title="lebbencsleves">
                 <div class="card-body">
                   <h5 class="card-title">Pénteki menü</h5>
                   <p class="card-text">Az adagok egy személyre vannak, a recept megtalálható a recept szóra kattintva.</p>
@@ -129,14 +129,61 @@
                 </div>
               </div>
                  </div>
-                 <footer>
-                  <div class="bg-white mt-5">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
+
+                 <footer class="text-center text-white mt-5" style="background-color: #f1f1f1;">
+                  <div class="container pt-4">
+                    <section class="mb-4">
+                      <a class="btn btn-link btn-floating btn-lg text-dark m-1" 
+                      href="https://www.facebook.com/dszcmechwart"><i class="fa fa-facebook"></i>
+                      </a>
+                      
+                      <a class="btn btn-link btn-floating btn-lg text-dark m-1" 
+                      href="https://www.dszcmechwart.hu/"><i class="fa fa-google"></i>
+                      </a>
+
+                      <a class="btn btn-link btn-floating btn-lg text-dark m-1" 
+                      href="https://www.instagram.com/dszcmechwart/"><i class="fa fa-instagram"></i>
+                      </a>
+
+                      <a class="btn btn-link btn-floating btn-lg text-dark m-1" 
+                      href="https://www.youtube.com/channel/UCn2N-ezyC8aPs0YtZ2Fufogt"><i class="fa fa-youtube"></i>
+                      </a>
+
+                      <a class="btn btn-link btn-floating btn-lg text-dark m-1" 
+                      href="https://github.com/edvin2023/Mechwart-Menza-1.csoport"><i class="fa fa-github"></i>
+                      </a>
+
+                    </section>
+
+                    <form>
+                      <div class="row justify-content-center">
+                        <div class="col-auto mb-4 mb-md-0">
+                          <p class="pt-2 text-black badge">
+                            Iratkozz fel a hírlevelünkre!
+                          </p>
+                        </div>  
+                        <div class="col-md-5 col-12 mb-4 mb-md-0">
+                          <div class="form-outline mb-4">
+                            <input type="email" id="email" class="form-control">
+                            <label class="form-label" for="email">Email cím</label>
+                          </div>
+                        </div>
+                        <div class="col-auto mb-4 mb-md-0">
+                          <button type="submit" class="btn btn-success mb-4">
+                            Feliratkozás
+                          </button>
+                        </div>
+                      </div>
+                    </form>
                   </div>
-                 </footer>
+                  <div class="text-center text-light p-2" style="background-color: rgba(0, 0, 0, 0.897);">
+                    © 2023 Copyright:
+                    <a class="text-light" href="https://www.dszcmechwart.hu/">Mechwart Menza</a>
+                  </div>
+                </footer>
             </div> 
 </body>
+
 <script src="js/bootstrap.bundle.min.js"></script>
 <script language="javascript">
   var images = ["img/soup_gulyas.jpg", "img/rantotthus.jpg", "img/gofri.jpg"]
@@ -144,11 +191,12 @@
 var imgState = 0;
 
 var imgTag = document.getElementById("imgClickAndChange");
-
+{
 imgTag.addEventListener("click", function (event) {
   imgState = (++imgState % images.length);
   event.target.src = images[imgState];
 });
+}
 var images = ["img/jokaibableves.jpg", "img/makosteszta.jpg", "img/gofri.jpg"]
 
 var imgState = 0;
