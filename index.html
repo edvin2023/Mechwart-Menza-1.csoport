@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mechwart menza heti étlap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="stilus.css">
 </head>
@@ -38,7 +39,7 @@
           </div>
           <div class="row col-12 col-lg-12 col-xxl-12 justify-content-center" style="margin: 0;"> 
             <div class="card" style="width: 18rem; margin-left: 20px; margin-top: 50px;">
-              <img class="card-img-top" src="img/soup_gulyas.jpg" alt="Card image cap">
+              <img class="card-img-top" src="img/soup_gulyas.jpg" id="imgClickAndChange" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Hétfői menü</h5>
                 <p class="card-text">Az adagok egy személyre vannak, a recept megtalálható a recept szóra kattintva.</p>
@@ -56,7 +57,7 @@
               </div>
             </div> 
             <div class="card" style="width: 18rem; margin-left: 20px; margin-top: 50px;">
-                <img class="card-img-top" src="img/jokaibableves.jpg" alt="Card image cap">
+                <img class="card-img-top" src="img/jokaibableves.jpg" id="imgClickAndChange1" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Keddi menü</h5>
                   <p class="card-text">Az adagok egy személyre vannak, a recept megtalálható a recept szóra kattintva.</p>
@@ -128,8 +129,68 @@
                 </div>
               </div>
                  </div>
-
+                 <footer>
+                  <div class="bg-white mt-5">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                  </div>
+                 </footer>
             </div> 
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script language="javascript">
+  var images = ["img/soup_gulyas.jpg", "img/rantotthus.jpg", "img/gofri.jpg"]
+
+var imgState = 0;
+
+var imgTag = document.getElementById("imgClickAndChange");
+
+imgTag.addEventListener("click", function (event) {
+  imgState = (++imgState % images.length);
+  event.target.src = images[imgState];
+});
+var images = ["img/jokaibableves.jpg", "img/makosteszta.jpg", "img/gofri.jpg"]
+
+var imgState = 0;
+
+var imgTag = document.getElementById("imgClickAndChange1");
+
+imgTag.addEventListener("click", function (event) {
+  imgState = (++imgState % images.length);
+  event.target.src = images[imgState];
+});
+
+var images = ["img/jokaibableves.jpg", "img/makosteszta.jpg", "img/gofri.jpg"]
+
+var imgState = 0;
+
+var imgTag = document.getElementById("imgClickAndChange2");
+
+imgTag.addEventListener("click", function (event) {
+  imgState = (++imgState % images.length);
+  event.target.src = images[imgState];
+});
+
+var images = ["img/jokaibableves.jpg", "img/makosteszta.jpg", "img/gofri.jpg"]
+
+var imgState = 0;
+
+var imgTag = document.getElementById("imgClickAndChange3");
+
+imgTag.addEventListener("click", function (event) {
+  imgState = (++imgState % images.length);
+  event.target.src = images[imgState];
+});
+
+var images = ["img/jokaibableves.jpg", "img/makosteszta.jpg", "img/gofri.jpg"]
+
+var imgState = 0;
+
+var imgTag = document.getElementById("imgClickAndChange4");
+
+imgTag.addEventListener("click", function (event) {
+  imgState = (++imgState % images.length);
+  event.target.src = images[imgState];
+});
+</script>
 </html>
