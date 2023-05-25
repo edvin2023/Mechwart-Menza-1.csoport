@@ -1,0 +1,19 @@
+body {
+    background-image: url(img/wp1874164-969284960.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.jumbotron {
+    margin-top: 30px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.kulsoresz {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
